@@ -577,9 +577,15 @@ a { color: inherit; text-decoration: none; }
   .nav__links { display: none; }
   .rail { display: none; }
   .hero { padding: 90px 28px 40px; }
-  .hero__stage { min-height: 60vh; }
-  .hero__globe { width: 110vw; height: 110vw; left: -25%; top: 35%; }
-  .hero__name { text-align: left; margin-top: 12vh; }
+  .hero__stage { min-height: unset; display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .hero__globe {
+    position: relative;
+    width: 88vw; height: 88vw;
+    left: auto; top: auto; margin-top: -10vw; margin-bottom: 0;
+    max-width: none;
+    align-self: center;
+  }
+  .hero__name { text-align: left; margin-top: 4vw; align-self: flex-start; width: 100%; }
   .origin, .now, .built, .log, .drive, .contact { padding-left: 28px; padding-right: 28px; }
   .origin__grid { grid-template-columns: 1fr; gap: 40px; }
   .origin__big, .origin__aside, .origin__close { grid-column: 1; }
